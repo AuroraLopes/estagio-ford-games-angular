@@ -1,0 +1,95 @@
+/* Estilos principais do app-container */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+/* Estilo quando o campo está desabilitado */
+input-text[disabled] {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+}
+
+/* Bordas coloridas para os diferentes status */
+input-text[status="error"] {
+  border-color: #ff4d4d;
+  background-color: #ffdddd;
+}
+
+input-text[status="success"] {
+  border-color: #4caf50;
+  background-color: #d4edda;
+}
+
+input-text[status="default"] {
+  border-color: #ccc;
+}
+
+/* Estilo para os helper texts */
+p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Helper text para o status */
+input-text[status="error"] ~ p {
+  color: #ff4d4d;
+}
+
+input-text[status="success"] ~ p {
+  color: #4caf50;
+}
+
+input-text[status="default"] ~ p {
+  color: #666;
+}
+
+/* Botões estilizados */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Botões ao passar o mouse */
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo do botão de enviar */
+button[type="submit"] {
+  background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Exibição do valor atual */
+div p {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}

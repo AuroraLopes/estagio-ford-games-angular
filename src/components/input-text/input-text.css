@@ -1,0 +1,81 @@
+/* Estilos gerais do wrapper do input */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos gerais para o campo de entrada */
+input {
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Label do campo */
+label {
+  margin-bottom: 0.3em;
+  font-size: 1em;
+}
+
+/* Texto de ajuda (helper text) */
+.helper-text {
+  font-size: 0.875em;
+  margin-top: 0.2em;
+  color: rgba(0, 0, 0, 0.6); /* Cor padrão do helper text */
+}
+
+/* Estados do campo */
+.input-wrapper.default input {
+  border-color: black;
+}
+
+.input-wrapper.success input {
+  border-color: green;
+}
+
+.input-wrapper.error input {
+  border-color: red;
+}
+
+/* Cor do helper-text conforme o status */
+.input-wrapper.success .helper-text {
+  color: green;
+}
+
+.input-wrapper.error .helper-text {
+  color: red;
+}
+
+/* Estilo para o campo desabilitado */
+.input-wrapper.disabled label,
+.input-wrapper.disabled input,
+.input-wrapper.disabled .helper-text {
+  color: gray;
+  border-color: gray;
+}
+
+input:disabled {
+  background-color: #f0f0f0;
+  color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+}
+
+/* Remove o helper-text ao desabilitar o campo */
+.input-wrapper.disabled .helper-text {
+  display: none;
+}
+
+/* Ajuste para diferentes tamanhos */
+.input-wrapper.small input {
+  padding: 0.4em;
+  font-size: 0.9em;
+}
+
+.input-wrapper.large input {
+  padding: 0.6em;
+  font-size: 1.1em;
+}
